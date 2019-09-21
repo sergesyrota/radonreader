@@ -34,8 +34,6 @@ def RetryMultiple(address, attempts=4):
         return GetRadonValue(address)
 
     except Exception as e:
-        if args.verbose and not args.silent:
-            print (e)
         for i in range(1,attempts):
             try:
                 return GetRadonValue(address)
