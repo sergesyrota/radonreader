@@ -1,0 +1,16 @@
+# dht - Simple Flask script to show DHT sensor data
+#
+
+[Unit]
+Description=RD200 Radon Server
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/local/bin/radon-reader.py
+Restart=always
+User=pi
+#Group=nobody
+
+[Install]
+WantedBy=multi-user.target
